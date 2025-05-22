@@ -24,7 +24,9 @@ jobs:
         run: chmod  +x  gradlew
         
       - name: build with gradle
-        run: ./gradlew  clean  build
+        run: |
+          cd massai_mara_park-main
+          ./gradlew  clean  build
         
       - name: list build/libs directory
         run:  ls -al  ./build/libs  
